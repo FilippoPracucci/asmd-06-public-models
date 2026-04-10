@@ -15,3 +15,11 @@ class PNSpec extends AnyFunSuite:
 
     pnME.paths(MSet(N,N),7).toSet should be:
       Set(expected1, expected2, expected3)
+
+  import scala.u06.examples.PNReadersWriters.*
+
+  test("PN for readers and writers should properly generate 12-length paths"):
+    pnRW.paths(MSet(P1,P1), 12).toSet.foreach(_.foreach: m =>
+      m.disjoined(MSet(P6,P7)) should be (true)
+      m.disjoined(MSet(P7,P7)) should be (true)
+    )
