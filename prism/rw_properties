@@ -1,0 +1,9 @@
+const double k;
+const int n;
+
+// Probability that at least n+1 readers are reading in k time units
+ P=? [(true) U<=k (p6>n)]
+
+// Probability that 1 writer is actually writing in k time units
+ P=? [(true) U<=k (p7=1)]
+
